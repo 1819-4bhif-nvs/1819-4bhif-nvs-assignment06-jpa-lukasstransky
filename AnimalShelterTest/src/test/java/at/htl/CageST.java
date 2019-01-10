@@ -59,8 +59,8 @@ public class CageST {
                 .build();
 
         JsonObject cageJson = Json.createObjectBuilder()
-                .add("row", 5)
-                .add("column", 21)
+                .add("cage_row", 5)
+                .add("cage_column", 21)
                 .add("pet", petJson)
                 .add("animalShelter", shelterJson)
                 .build();
@@ -78,15 +78,15 @@ public class CageST {
 
         JsonObject result = response.readEntity(JsonObject.class);
         assertThat(response.getStatus(), is(200));
-        /*assertThat(result.getInt("row"), is(5));
-        assertThat(result.getInt("column"), is(21));*/
+        assertThat(result.getInt("cage_row"), is(5));
+        assertThat(result.getInt("cage_column"), is(21));
     }
 
     @Test
     public void t03_putAndGetCageByRow(){
         JsonObject cageJson = Json.createObjectBuilder()
-                .add("row", 1)
-                .add("column", 12)
+                .add("cage_row", 1)
+                .add("cage_column", 12)
                 .add("pet", Json.createObjectBuilder().add("name", "Goofy").add("price", 14))
                 .add("animalShelter", Json.createObjectBuilder().add("town", "Innsbruck").add("street", "Brücklweg").add("post_code", 5454))
                 .build();
@@ -104,15 +104,15 @@ public class CageST {
 
         JsonObject result = response.readEntity(JsonObject.class);
         assertThat(response.getStatus(), is(200));
-        assertThat(result.getInt("row"), is(1));
-        assertThat(result.getInt("column"), is(12));
+        assertThat(result.getInt("cage_row"), is(1));
+        assertThat(result.getInt("cage_column"), is(12));
     }
 
     @Test
     public void t04_putAndGetCageByColumn(){
         JsonObject cageJson = Json.createObjectBuilder()
-                .add("row", 4)
-                .add("column", 9)
+                .add("cage_row", 4)
+                .add("cage_column", 9)
                 .add("pet", Json.createObjectBuilder().add("name", "Garfield").add("price", 1478))
                 .add("animalShelter", Json.createObjectBuilder().add("town", "Hallstadt").add("street", "Hallgasse").add("post_code", 8771))
                 .build();
@@ -130,8 +130,8 @@ public class CageST {
 
         JsonObject result = response.readEntity(JsonObject.class);
         assertThat(response.getStatus(), is(200));
-        assertThat(result.getInt("row"), is(4));
-        assertThat(result.getInt("column"), is(9));
+        assertThat(result.getInt("cage_row"), is(4));
+        assertThat(result.getInt("cage_column"), is(9));
     }
 
     @Test

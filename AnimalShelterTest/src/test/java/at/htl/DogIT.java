@@ -40,7 +40,8 @@ public class DogIT {
         JsonObject result = response.readEntity(JsonObject.class);
         System.out.println(result);
 
-        assertThat(response.getStatus(), is(204)); //?????????????
+        //assertThat(response.getStatus(), is(204));
+        assertThat(response.getStatus(), is(200));
     }
 
     @Test

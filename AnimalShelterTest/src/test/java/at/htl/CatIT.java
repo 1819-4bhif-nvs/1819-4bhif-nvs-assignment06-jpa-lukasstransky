@@ -38,7 +38,8 @@ public class CatIT {
                 .request(MediaType.APPLICATION_JSON)
                 .get();
 
-        assertThat(response.getStatus(), is(204));
+        //assertThat(response.getStatus(), is(204));
+        assertThat(response.getStatus(), is(200));
     }
 
     @Test
