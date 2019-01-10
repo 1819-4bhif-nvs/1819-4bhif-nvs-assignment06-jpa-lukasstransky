@@ -10,7 +10,7 @@ public abstract class Animal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String breed;
+    private String breed; //Rasse
     private int age;
     private double weight;
 

@@ -24,7 +24,7 @@ public class AnimalShelter implements Serializable {
 
     @JsonbTransient
     @OneToMany(mappedBy = "animalShelter")
-    private transient List<Cage> cages = new ArrayList<>();
+    private List<Cage> cages = new ArrayList<>();
 
     //region Constructors
     public AnimalShelter() {

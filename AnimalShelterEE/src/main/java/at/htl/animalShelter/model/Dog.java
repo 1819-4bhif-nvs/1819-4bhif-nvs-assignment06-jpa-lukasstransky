@@ -26,8 +26,10 @@ public class Dog extends Pet {
     }
     //endregion
 
+    //region Getter and Setter
     @Override
     public Long getId() {
         return id;
     }
+    //endregion
 }

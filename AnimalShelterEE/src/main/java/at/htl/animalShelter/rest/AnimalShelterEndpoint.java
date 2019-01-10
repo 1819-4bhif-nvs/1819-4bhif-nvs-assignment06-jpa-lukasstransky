@@ -48,14 +48,14 @@ public class AnimalShelterEndpoint {
     }
 
     @POST
-    public Long putDoctor(AnimalShelter animalShelter) {
+    public Long putAnimalShelter(AnimalShelter animalShelter) {
         em.persist(animalShelter);
         return animalShelter.getId();
     }
 
     @DELETE
     @Path("{id}")
-    public void deleteDoctor(@PathParam("id") long id) {
+    public void deleteAnimalShelter(@PathParam("id") long id) {
         AnimalShelter a = em.find(AnimalShelter.class, id);
         if(a != null) {
             em.remove(em.contains(a) ? a : em.merge(a));

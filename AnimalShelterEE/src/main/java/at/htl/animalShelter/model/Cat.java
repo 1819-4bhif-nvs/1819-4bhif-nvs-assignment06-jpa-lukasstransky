@@ -26,9 +26,10 @@ public class Cat extends Pet{
     }
     //endregion constructors
 
-
+    //region Getter and Setter
     @Override
     public Long getId() {
         return id;
     }
+    //endregion
 }

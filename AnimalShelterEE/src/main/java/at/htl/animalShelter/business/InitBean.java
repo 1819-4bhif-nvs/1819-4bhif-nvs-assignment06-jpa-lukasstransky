@@ -21,9 +21,9 @@ public class InitBean {
 
     @PostConstruct
     private void init(){
-        /*System.err.println("***************** hello");
+        //System.err.println("***************** hello");
 
-        AnimalShelter as1 = new AnimalShelter("Luftenberg", "Holzgasse 5", 4225);
+        /*AnimalShelter as1 = new AnimalShelter("Luftenberg", "Holzgasse 5", 4225);
         AnimalShelter as2 = new AnimalShelter("Linz", "Bachweg 99", 4060);
         AnimalShelter as3 = new AnimalShelter("Wien", "Schmiedgasse 75", 4545);
 

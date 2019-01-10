@@ -14,18 +14,15 @@ public class Cage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private int cage_row;
-
     private int cage_column;
-
 
     @OneToOne(cascade = {CascadeType.ALL})
     private Pet pet;
 
     //@JsonbTransient
     @ManyToOne(cascade = {CascadeType.ALL})
-    private transient AnimalShelter animalShelter;
+    private AnimalShelter animalShelter;
 
     //region Constructors
     public Cage() {
